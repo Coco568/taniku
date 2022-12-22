@@ -48,3 +48,6 @@
 　メイン機能実装：12/20 - 1/25
 　MVPリリース：1/25
 　本番リリース：２/25
+
+## 画面遷移図
+https://www.figma.com/file/UBisvrtY3AgjljTgUv5COS/Untitled?node-id=0%3A1&t=EBwqBsc9Ap3gzjRB-1
