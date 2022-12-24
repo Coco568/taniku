@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+  mount_uploader :icon, IconUploader
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true
   validates :password, length: { minimum: 3}, if: -> {new_record? || changes[:crypted_password]}

@@ -1,0 +1,23 @@
+<div class="container" >
+  <div class="row">
+    <%= form_with model: @user, local: true do |f| %>
+      <div class="form-group">
+        <%= f.label :name %></br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="form-group">  
+        <%= f.label :email %></br>
+        <%= f.email_field :email %>
+      </div>
+      <div class="form-group">
+        <%= f.label :icon %></br>
+        <%= f.file_field :icon %>
+        <%= f.hidden_field :icon_cache %>
+        <% if @user.icon? %>
+          <%= image_tag(@user.icon_url),  %>
+        <% end %>
+      </div></br>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
