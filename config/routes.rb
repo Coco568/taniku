@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :users, only: %i[create new destroy edit]
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'login' => 'user_sessions#create'
+  post 'logout' => 'user_sessions#destroy', :as => :logout
+  resources :users, only: %i[create new destroy edit show]
 end

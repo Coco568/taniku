@@ -1,23 +1,17 @@
-<div class="container" >
+<div class="container">
   <div class="row">
     <%= form_with model: @user, local: true do |f| %>
       <div class="form-group">
-        <%= f.label :name %></br>
-        <%= f.text_field :name %>
-      </div>
-      <div class="form-group">  
         <%= f.label :email %></br>
         <%= f.email_field :email %>
       </div>
       <div class="form-group">
         <%= f.label :password %></br>
         <%= f.password_field :password %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %></br>
-        <%= f.password_field :password_confirmation %>
       </div></br>
-      <%= f.submit %>
+      <div class="form-group">
+        <%= f.submit 'ログイン' %>
+      </div>
     <% end %>
-  </div>
+  </div>  
 </div>
