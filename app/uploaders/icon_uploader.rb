@@ -28,9 +28,14 @@ class IconUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process resize_to_fit: [50, 50]
+  # Create different versions of your uploaded files: 
+  version :icon_small do
+    process resize_to_fit: [400,400]
+  end
+
+  version :icon_large do
+    process resize_to_fit: [100,100]
+  end
   # end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
@@ -44,4 +49,5 @@ class IconUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
 end
