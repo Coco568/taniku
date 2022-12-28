@@ -118,6 +118,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jp_prefecture (1.1.1)
     jquery-rails (4.5.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   enum_help
   importmap-rails
   jbuilder
+  jp_prefecture
   jquery-rails
   mini_magick
   puma (~> 5.0)

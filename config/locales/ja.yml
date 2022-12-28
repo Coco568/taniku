@@ -10,6 +10,7 @@ ja:
         gender: 性別
         password: パスワード
         password_confirmation: パスワード(確認)
+        prefecture_code: 都道府県
   enums:
     user:
       gender:
