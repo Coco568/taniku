@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include JpPrefecture
   authenticates_with_sorcery!
   mount_uploader :icon, IconUploader
   validates :email, uniqueness: true, presence: true
@@ -8,5 +9,5 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> {new_record? || changes[:crypted_password]}
   validates :gender, presence: true
   enum gender: {closed: 0, male: 1, female: 2, other: 3}
-
+  jp_prefecture :prefecture_code, presence: true, default:0
 end
