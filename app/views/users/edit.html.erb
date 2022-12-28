@@ -1,0 +1,28 @@
+<div class="container" >
+  <div class="row">
+    <%= form_with model: @user, local: true do |f| %>
+      <div class="form-group">
+        <%= f.label :name %></br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="form-group">  
+        <%= f.label :email %></br>
+        <%= f.email_field :email %>
+      </div>
+      <div class="form-group">
+        <%= f.label :gender %>
+        <%= f.select :gender, User.genders_i18n.invert.to_a%>
+      </div>
+      <div class="form-group">
+        <%= f.label :icon %></br>
+        <%= f.file_field :icon %></br>
+        <%= f.hidden_field :icon_cache %>
+        <% if @user.icon? %>
+          <%= image_tag current_user.icon_url, class: "rounded-circle", size: "100x100" %>
+        <% end %>
+      </div>
+      <br>
+      <%= f.submit 'ユーザー更新'%>
+    <% end %>
+  </div>
+</div>
