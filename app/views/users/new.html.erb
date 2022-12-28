@@ -10,6 +10,10 @@
         <%= f.email_field :email %>
       </div>
       <div class="form-group">
+        <%= f.label :gender %></br>
+        <%= f.select :gender, User.genders_i18n.invert.to_a %>
+      </div>
+      <div class="form-group">
         <%= f.label :password %></br>
         <%= f.password_field :password %>
       </div>
@@ -17,7 +21,7 @@
         <%= f.label :password_confirmation %></br>
         <%= f.password_field :password_confirmation %>
       </div></br>
-      <%= f.submit %>
+      <%= f.submit 'ユーザー登録' %>
     <% end %>
   </div>
 </div>

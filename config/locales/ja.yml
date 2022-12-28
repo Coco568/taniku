@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: ユーザー
+        email: メールアドレス
+        prefecture: 都道府県
+        gender: 性別
+        password: パスワード
+        password_confirmation: パスワード(確認)
+  enums:
+    user:
+      gender:
+        closed: 非公開
+        male: 男性
+        female: 女性
+        other: その他
+      
+
