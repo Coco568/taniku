@@ -8,9 +8,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path
+      redirect_to login_path, success: 'ユーザー作成できました!'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -18,9 +18,9 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_path(@user)
+      redirect_to user_path(@user), success: 'ユーザー情報を更新しました!'
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
