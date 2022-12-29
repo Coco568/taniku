@@ -1,10 +1,14 @@
 ja:
   activerecord:
+    errors:
+      format: "%{attribute}%{message}"
+      messages:
+        blank: を入力してください
     models:
       user: ユーザー
     attributes:
       user:
-        name: ユーザー
+        name: ユーザー名
         email: メールアドレス
         prefecture: 都道府県
         gender: 性別

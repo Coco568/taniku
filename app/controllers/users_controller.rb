@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to login_path, success: 'ユーザー作成できました!'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user), success: 'ユーザー情報を更新しました!'
     else
-      render  :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
