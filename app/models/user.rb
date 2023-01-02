@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   include JpPrefecture
   authenticates_with_sorcery!
+  has_one :calendars 
   mount_uploader :icon, IconUploader
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true
