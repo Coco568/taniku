@@ -6,6 +6,7 @@ ja:
         blank: を入力してください
     models:
       user: ユーザー
+      calendar: 記録
     attributes:
       user:
         name: ユーザー名
@@ -15,6 +16,9 @@ ja:
         password: パスワード
         password_confirmation: パスワード(確認)
         prefecture_code: 都道府県
+      calendar:
+        date_type: 記録の種類
+        record_date: 日付
   enums:
     user:
       gender:
@@ -22,6 +26,11 @@ ja:
         male: 男性
         female: 女性
         other: その他
+    calendar:
+      date_type: 
+        watering_date: 水やりをした日
+        pesticide_date: 薬剤を撒いた日
+        fertilizer_date: 肥料をあげた日
   simple_calendar:
     previous: 先月<<
     next: ">>来月"

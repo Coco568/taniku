@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
   # Defines the root path route ("/")
@@ -7,5 +8,5 @@ Rails.application.routes.draw do
   post 'login' => 'user_sessions#create'
   delete 'logout' => 'user_sessions#destroy', :as => :logout
   resources :users, only: %i[create new destroy edit update show]
-  resources :calendars, only: %i[show]
+  resources :calendars, only: %i[index show new create destroy]
 end
