@@ -17,9 +17,13 @@
   <%= month_calendar(events: @calendars) do |date, calendars| %>
     <%= date.day %>
     <% calendars.each do |calendar| %>
-      <div>
-        <%= calendar.date_type%>
-      </div>
+      <% if calendar.date_type == "watering_date"%>
+        <%= image_tag 'watering_icon', size: '30x30' %>
+      <% elsif calendar.date_type =="pesticide_date"%>
+        <%= image_tag 'pesticide_icon', size:'30x30' %>
+      <% elsif calendar.date_type == "fertilizer_date" %>
+        <%= image_tag 'fertilizer_icon', size: '30x30' %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
