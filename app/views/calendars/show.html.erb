@@ -1,0 +1,15 @@
+<%= turbo_frame_tag 'calendar' do %>
+  <%= month_calendar do |date| %>
+    <%= date.day %>
+  <% end %>
+<% end %>
+
+<div class="icon">
+  <%= image_tag 'watering_icon', size: '50x50' %><p>: 水やり</p>
+</div>
+<div class="icon">
+  <%= image_tag 'pesticide_icon', size: '50x50' %><p>: 薬剤</p>
+</div>
+<div class="icon">
+  <%= image_tag 'fertilize_icon', size: '50x50' %><p>: 肥料</p>
+</div>

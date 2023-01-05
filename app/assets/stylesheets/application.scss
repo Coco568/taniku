@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "simple_calendar";
 
 .logo-area {
   padding: 0.75rem;
@@ -9,8 +10,71 @@
   text-align: center;
 }
 
-
-
 .nav-item {
   float: right;
+}
+
+.input-record {
+  padding-top: 50px;
+  float: right;
+  width: 30%;
+  font-size: 24px;
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .form-group {
+    margin: 30px 0px;
+  }
+}
+
+.simple-calendar {
+  width: 65%;
+  margin-left: 20px;
+  .calendar-heading{
+    display:flex;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .calendar-title  {
+    font-size: 30px;
+  }
+  button {
+    margin-top: 10px;
+  }
+  span {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wday-0 {
+    background-color: #FFA594;
+  }
+
+.wday-6 {
+  background-color:  #AABBEE;
+}
+
+.today {
+  background-color: #FFCC77;
+}
+
+.prev-month {
+  background-color: #808080;
+  color: white;
+}
+
+.next-month {
+  display: none;
+}}
+
+
+.icon {
+  display: flex;
+  float: left;
+  margin: 0px 40px;
 }
