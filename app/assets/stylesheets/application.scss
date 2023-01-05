@@ -1,8 +1,20 @@
 @import "bootstrap";
 @import "simple_calendar";
+@import url(//fonts.googleapis.com/earlyaccess/hannari.css);
+
+body {
+  color:#444444;
+  background: #f4f0ca;
+  font-family: 'Hannari', serif;
+  margin-top: 50px;
+}
+
+footer {
+  background: #cfe0a3;
+}
 
 .logo-area {
-  padding: 0.75rem;
+  padding: 0.75px;
   text-align: center;
 }
 .top-content {
@@ -10,8 +22,10 @@
   text-align: center;
 }
 
-.nav-item {
-  float: right;
+.menu-bar {
+  font-size: 24px;
+  color: #444444;
+  text-decoration: none;
 }
 
 .input-record {
@@ -42,6 +56,10 @@
 
   .calendar-title  {
     font-size: 30px;
+  }
+
+  table {
+    background-color: #ffffff;
   }
   button {
     margin-top: 10px;
