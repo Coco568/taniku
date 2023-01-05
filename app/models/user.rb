@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   include JpPrefecture
   authenticates_with_sorcery!
-  has_many :calendars 
+  has_many :calendars ,dependent: :destroy
   mount_uploader :icon, IconUploader
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true
@@ -11,4 +11,8 @@ class User < ApplicationRecord
   validates :gender, presence: true
   enum gender: {closed: 0, male: 1, female: 2, other: 3}
   jp_prefecture :prefecture_code, presence: true, default:0
+
+  def own?(object)
+    self.id == object.user_id 
+  end
 end

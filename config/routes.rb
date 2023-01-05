@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   post 'login' => 'user_sessions#create'
   delete 'logout' => 'user_sessions#destroy', :as => :logout
   resources :users, only: %i[create new destroy edit update show]
-  resources :calendars, only: %i[index show new create destroy]
+  resources :calendars
 end

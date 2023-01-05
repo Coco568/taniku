@@ -1,5 +1,5 @@
 class Calendar < ApplicationRecord
-  belongs_to :user,dependent: :destroy
+  belongs_to :user
   validates :date_type, presence: true
   validates :record_date, presence: true
   enum date_type: {watering_date: 0, pesticide_date: 1, fertilizer_date: 2}

@@ -1,6 +1,6 @@
 <div class="input-record"> 
   <h1>登録する日付を入力してください</h1>
-  <%= form_with model: @calendar,url: calendars_path,local: true do |f|%>
+  <%= form_with model: Calendar.new,url: calendars_path,local: true do |f|%>
     <div class="form-group">
       <%= f.label :date_type%></br>
       <%= f.select :date_type, Calendar.date_types_i18n.invert%>
@@ -18,22 +18,22 @@
     <%= date.day %>
     <% calendars.each do |calendar| %>
       <% if calendar.date_type == "watering_date"%>
-        <%= image_tag 'watering_icon', size: '30x30' %>
+        <%= link_to image_tag('watering_icon', size: '30x30'), edit_calendar_path(calendar) %>
       <% elsif calendar.date_type =="pesticide_date"%>
-        <%= image_tag 'pesticide_icon', size:'30x30' %>
+        <%= link_to image_tag('pesticide_icon', size:'30x30'), edit_calendar_path(calendar) %>
       <% elsif calendar.date_type == "fertilizer_date" %>
-        <%= image_tag 'fertilizer_icon', size: '30x30' %>
+        <%= link_to image_tag('fertilizer_icon', size: '30x30'),edit_calendar_path(calendar) %>
       <% end %>
     <% end %>
   <% end %>
 <% end %>
 
 <div class="icon">
-  <%= image_tag 'watering_icon', size: '50x50' %><p>: 水やり</p>
+  <%= image_tag 'watering_icon', size: '40x40' %><p>: 水やり</p>
 </div>
 <div class="icon">
-  <%= image_tag 'pesticide_icon', size: '50x50' %><p>: 薬剤</p>
+  <%= image_tag 'pesticide_icon', size: '40x40' %><p>: 薬剤</p>
 </div>
 <div class="icon">
-  <%= image_tag 'fertilizer_icon', size: '50x50' %><p>: 肥料</p>
+  <%= image_tag 'fertilizer_icon', size: '40x40' %><p>: 肥料</p>
 </div>
