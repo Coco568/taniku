@@ -1,23 +1,25 @@
-<nav class = "navbar navbar-expand-lg navbar-light" style="background-color: #8CC152; height: 50px;">
-  <div class = "container-fluid">
-    <a class = "navbar-brand">私の多肉こよみ</a>
-    <ul class="navbar-nav mb-2 mb-lg-0">
-      <li class = "nav-item">
-        <%= image_tag current_user.icon_url, size: "50x50"%>
-      </li>
-      <li class="nav-item">
-       <div class="dropdown">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            メニュー
-          </button>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'マイページ', calendars_path,class: "dropdown-item" %></li>
-            <li><%= link_to '設定' ,edit_user_path(current_user), class: "dropdown-item" %></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><%= link_to 'ログアウト' ,logout_path, data: { turbo_method: :delete },class:"dropdown-item" %></li>
-        </ul>
-      </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+<header>
+  <nav class = "navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #88ab36; height: 50px;">
+    <div class = "container-fluid">
+      <a class = "navbar-brand">私の多肉こよみ</a>
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class = "nav-item">
+          <%= image_tag current_user.icon_url, size: "50x50"%>
+        </li>
+        <li class="nav-item">
+        <div class="dropdown">
+            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              メニュー
+            </button>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'マイページ', calendars_path,class: "dropdown-item" %></li>
+              <li><%= link_to '設定' ,edit_user_path(current_user), class: "dropdown-item" %></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to 'ログアウト' ,logout_path, data: { turbo_method: :delete },class:"dropdown-item" %></li>
+          </ul>
+        </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
