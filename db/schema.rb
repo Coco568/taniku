@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_01_140815) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_08_184446) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_140815) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_calendars_on_user_id"
+  end
+
+  create_table "picture_books", force: :cascade do |t|
+    t.string "breed", default: "名無し", null: false
+    t.integer "price"
+    t.string "shop", default: "不明", null: false
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_picture_books_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,4 +48,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_140815) do
   end
 
   add_foreign_key "calendars", "users"
+  add_foreign_key "picture_books", "users"
 end

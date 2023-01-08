@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'picture_books/index'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
   delete 'logout' => 'user_sessions#destroy', :as => :logout
   resources :users, only: %i[create new destroy edit update show]
   resources :calendars
+  resources :picture_books
 end
