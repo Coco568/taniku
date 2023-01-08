@@ -12,22 +12,9 @@
     <%= f.submit %>
   <% end %>
 </div>
-
-<%= turbo_frame_tag 'calendar' do %>
-  <%= month_calendar(events: @calendars) do |date, calendars| %>
-    <%= date.day %>
-    <% calendars.each do |calendar| %>
-      <% if calendar.date_type == "watering_date"%>
-        <%= link_to image_tag('watering_icon', size: '30x30'), edit_calendar_path(calendar) %>
-      <% elsif calendar.date_type =="pesticide_date"%>
-        <%= link_to image_tag('pesticide_icon', size:'30x30'), edit_calendar_path(calendar) %>
-      <% elsif calendar.date_type == "fertilizer_date" %>
-        <%= link_to image_tag('fertilizer_icon', size: '30x30'),edit_calendar_path(calendar) %>
-      <% end %>
-    <% end %>
-  <% end %>
-<% end %>
-
+<div id="calendar">
+  <%= render 'calendar', logs: @logs %>
+</div>
 <div class="icon">
   <%= image_tag 'watering_icon', size: '40x40' %><p>: 水やり</p>
 </div>

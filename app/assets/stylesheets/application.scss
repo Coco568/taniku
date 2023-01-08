@@ -3,7 +3,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/hannari.css);
 
 body {
-  color:#444444;
+  color:#373a3c;
   background: #f4f0ca;
   font-family: 'Hannari', serif;
   margin-top: 50px;
@@ -11,6 +11,18 @@ body {
 
 footer {
   background: #cfe0a3;
+}
+.navbar-brand {
+  color: #373a3c;
+}
+
+.btn {
+  //border-radius: 0.25rem;
+  border-radius: 0;
+}
+
+.btn-danger{
+  background-color:#dd5522;
 }
 
 .logo-area {
@@ -51,7 +63,10 @@ footer {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-
+    .calendar-btn{
+      margin: 6px;
+      text-align: center;
+    }
   }
 
   .calendar-title  {
