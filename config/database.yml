@@ -25,5 +25,5 @@ production:
   <<: *default
   database: clcn15bfb0006bxqubr70cin7
   username: clcn15bf90004bxqu9yts3ug2
-  password: <%= ENV['TANIKU_DATABASE_PASSWORD']
+  password: <%= ENV['TANIKU_DATABASE_PASSWORD'] %>
   url: <%=ENV['DATABASE_URL'] %>
