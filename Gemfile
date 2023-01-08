@@ -51,7 +51,7 @@ gem "bootsnap", require: false
   gem 'sorcery'
   gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
   gem "mini_magick"
-  gem 'bootstrap', '~>5.0.2'
+  gem 'bootstrap'
   gem 'jquery-rails'
   gem 'enum_help'
   gem 'jp_prefecture'

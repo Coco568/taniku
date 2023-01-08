@@ -2,10 +2,7 @@
   "name": "taniku",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/ Coco568/taniku.git"
-  },
+  "repository": "git+ssh://git@github.com/ Coco568/taniku.git",
   "author": "Coco568 <fmrgse3435@yahoo.co.jp>",
   "license": "MIT",
   "description": "多肉植物の成長を実感したい人のための かわいい姿も元気がない姿も買ったばかりの新入りも全て残す 多肉植物記録サービスです。",
@@ -19,5 +16,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {}
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.5"
+  }
 }
