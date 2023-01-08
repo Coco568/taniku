@@ -26,3 +26,4 @@ production:
   database: taniku_production
   username: taniku
   password: <%= ENV['TANIKU_DATABASE_PASSWORD']
+  url: <%=ENV['DATABASE_URL'] %>
