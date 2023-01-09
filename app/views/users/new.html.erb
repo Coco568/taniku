@@ -1,31 +1,32 @@
 <div class="container" >
+  <h1> 新規登録</h1>
   <div class="row">
     <%= form_with model: @user, local: true do |f| %>
       <%= render 'shared/error_messages' , object: f.object %>
       <div class="form-group">
-        <%= f.label :name %></br>
-        <%= f.text_field :name %>
+        <%= f.label :name %>
+        <%= f.text_field :name , class: 'form-control', placeholder: "例)多肉太郎"%>
       </div>
       <div class="form-group">  
-        <%= f.label :email %></br>
-        <%= f.email_field :email %>
+        <%= f.label :email %>
+        <%= f.email_field :email , class: 'form-control', placeholder: "例)sample@example.com"%>
       </div>
       <div class="form-group">
         <%= f.label :gender %></br>
         <%= f.select :gender, User.genders_i18n.invert.to_a %>
       </div>
        <div claass="form-group">
-        <%= f.label :prefecture_code%></br>
+        <%= f.label :prefecture_code, class: 'form-control' %></br>
         <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name%>
       </div>
       <div class="form-group">
         <%= f.label :password %></br>
-        <%= f.password_field :password %>
+        <%= f.password_field :password ,class: 'form-control' , placeholder: "6桁以上のパスワードを設定してください"%>
       </div>
       <div class="form-group">
         <%= f.label :password_confirmation %></br>
-        <%= f.password_field :password_confirmation %>
-      </div></br>
+        <%= f.password_field :password_confirmation , class: 'form-control' , placeholder: "もう一度入力してください"%>
+      </div>
       <%= f.submit 'ユーザー登録' %>
     <% end %>
   </div>

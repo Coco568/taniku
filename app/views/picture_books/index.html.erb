@@ -1,5 +1,5 @@
 <div class="row ">
-  <h1>私の多肉図鑑</h1>
+  <h1><%= current_user.name %>さんの多肉図鑑</h1>
   <%=button_to '追加する', new_picture_book_path, {method: :get, class: "btn btn-outline-success picture_add_btn"}%>
 </div>
 <div class="container picture-container">

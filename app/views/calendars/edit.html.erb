@@ -1,13 +1,17 @@
-<%= form_with model: @calendar, local: true do |f|%>
-  <div class="form-group">
-    <%= f.label :date_type%></br>
-    <%= f.select :date_type, Calendar.date_types_i18n.invert%>
+<div class="container">
+  <%= form_with model: @calendar, local: true do |f|%>
+    <div class="form-group">
+      <%= f.label :date_type%></br>
+      <%= f.select :date_type, Calendar.date_types_i18n.invert, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :record_date%>
+      <%= f.date_field :record_date ,class: 'form-control' %>
+    </div>
+    <div class="btn-group">
+    <%= f.submit '更新' ,class: 'btn btn-danger'%>
+  <% end %>
+  <%= link_to'カレンダーに戻る', calendars_path, class: 'btn btn-warning'%>
+  <%=button_to'削除', calendar_path(@calendar), method: :delete  ,class: 'btn btn-success'%>
   </div>
-  <div class="form-group">
-    <%= f.label :record_date%></br>
-    <%= f.date_field :record_date%>
-  </div>
-  <%= f.submit %>
-<% end %>
-<%=button_to'削除', calendar_path(@calendar), method: :delete  %>
-<%= link_to'カレンダーに戻る', calendars_path%>
+</div>
