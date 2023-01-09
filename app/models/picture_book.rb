@@ -1,8 +1,10 @@
 class PictureBook < ApplicationRecord
   belongs_to :user 
-  attribute :shop, :string, default: "不明"
-  attribute :name, :string, default: "名無し"
-  validates :name, presence: true
-  validates :price, numericality: true
-  validates :shop, presence: true
+  mount_uploader :picture, PictureUploader
+  has_many_attached :picture
+  attribute :purchase_date, :date, default: Date.current.strftime
+  validates :breed, presence: true
+  validates :price, length: {maximum: 15}
+  validates :shop, length: {maximum: 20}
+  validates :purchase_date, presence: true
 end

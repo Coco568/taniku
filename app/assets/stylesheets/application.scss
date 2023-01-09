@@ -12,8 +12,17 @@ body {
 footer {
   background: #cfe0a3;
 }
+
 .navbar-brand {
+  //white-space: nowrap;
+  margin-top:0px;
   color: #373a3c;
+  font-size: 25px;
+}
+
+.container-fluid {
+  height: 50px;
+  width: 100%
 }
 
 .btn {
@@ -23,6 +32,11 @@ footer {
 
 .btn-danger{
   background-color:#dd5522;
+}
+
+.picture_add_btn {
+  float: right;
+  margin-right: 20px;
 }
 
 .logo-area {
@@ -110,4 +124,8 @@ footer {
   display: flex;
   float: left;
   margin: 0px 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
 }

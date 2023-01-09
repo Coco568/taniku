@@ -11,26 +11,24 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_01_08_184446) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "calendars", force: :cascade do |t|
     t.integer "date_type", default: 0
     t.date "record_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_calendars_on_user_id"
   end
 
   create_table "picture_books", force: :cascade do |t|
-    t.string "breed", default: "名無し", null: false
-    t.integer "price"
-    t.string "shop", default: "不明", null: false
+    t.string "breed"
+    t.string "price"
+    t.string "shop"
+    t.date "purchase_date", default: "2023-01-10"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_picture_books_on_user_id"
   end
 
