@@ -19,6 +19,12 @@ ja:
       calendar:
         date_type: 記録の種類
         record_date: 日付
+      picture_book:
+        breed: 品種名
+        price: 価格
+        shop: 購入店舗
+        picture: 写真
+        purchase_date: 購入日
   enums:
     user:
       gender:
@@ -35,4 +41,8 @@ ja:
     previous: 先月<<
     next: ">>来月"
     week: Woche      
+  formats:
+    default: ! '%Y/%m/%d'
+    long: ! '%Y年%m月%d日'
+    short: ! '%m/%d'
 

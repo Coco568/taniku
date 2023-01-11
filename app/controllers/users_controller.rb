@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_path(@user), success: 'ユーザー情報を更新しました!'
+      redirect_to calendars_path, success: 'ユーザー情報を更新しました!'
     else
       render :edit, status: :unprocessable_entity
     end

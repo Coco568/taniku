@@ -12,9 +12,14 @@ body {
 footer {
   background: #cfe0a3;
 }
+
 .navbar-brand {
+  //white-space: nowrap;
+  margin-top:0px;
   color: #373a3c;
+  font-size: 25px;
 }
+
 
 .btn {
   //border-radius: 0.25rem;
@@ -23,6 +28,11 @@ footer {
 
 .btn-danger{
   background-color:#dd5522;
+}
+
+.picture_add_btn {
+  float: right;
+  margin-right: 20px;
 }
 
 .logo-area {
@@ -111,3 +121,24 @@ footer {
   float: left;
   margin: 0px 40px;
 }
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.picture-image {
+  text-align: center;
+}
+.card-title  {
+  text-align: center;
+a {
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: #373a3c;
+}}
+
+.list-group-item {
+  text-align: center;
+}
+

@@ -1,11 +1,12 @@
 class User < ApplicationRecord
   include JpPrefecture
   authenticates_with_sorcery!
-  has_many :calendars ,dependent: :destroy
   mount_uploader :icon, IconUploader
+  has_many :calendars ,dependent: :destroy
+  has_many :picture_books, dependent: :destroy
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true
-  validates :password, length: { minimum: 3}, if: -> {new_record? || changes[:crypted_password]}
+  validates :password, length: { minimum: 6}, if: -> {new_record? || changes[:crypted_password]}
   validates :password, confirmation: true, if: -> {new_record? || changes[:crypted_password]}
   validates :password_confirmation, presence: true, if: -> {new_record? || changes[:crypted_password]}
   validates :gender, presence: true
