@@ -16,8 +16,8 @@
         <%= f.select :gender, User.genders_i18n.invert.to_a %>
       </div>
        <div claass="form-group">
-        <%= f.label :prefecture_code, class: 'form-control' %></br>
-        <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name%>
+        <%= f.label :prefecture_codes %></br>
+        <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, class: 'form-control'%>
       </div>
       <div class="form-group">
         <%= f.label :password %></br>

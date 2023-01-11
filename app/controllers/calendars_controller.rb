@@ -32,7 +32,7 @@ class CalendarsController < ApplicationController
 
 
   def show
-    @calendar = User.find(params[:user_d])
+    @calendar = User.find(params[:id])  
   end
 
   private

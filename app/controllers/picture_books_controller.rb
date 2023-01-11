@@ -1,4 +1,5 @@
 class PictureBooksController < ApplicationController
+  before_action :set_picture_book, only: %i[edit update destroy]
   def index
     @picture_books = PictureBook.all
   end
@@ -16,9 +17,32 @@ class PictureBooksController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def show
+    @picture_book = PictureBook.find(params[:id])
+  end
+
+  def update
+    if @picture_book.update(picture_book_params)
+      redirect_to picture_books_path, success: '図鑑を更新しました!'
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @picture_book.destroy
+    redirect_to picture_books_path, success: "図鑑のデータを削除しました!"
+  end
+
   private
 
   def picture_book_params
-    params.require(:picture_book).permit(:breed, :price, :shop, :picture, :purchase_date)
+    params.require(:picture_book).permit(:breed, :price, :shop, :picture, :picture_cache, :purchase_date)
+  end
+
+  def set_picture_params
+    @picture_book = current_user.picture_books.find(params[:id])
   end
 end

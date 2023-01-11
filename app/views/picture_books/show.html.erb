@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card  mt-5" style="width: auto; padding: 0px;">
+    <h1 class="card-title"><%= @picture_book.breed%></h1>
+    <%=  l @picture_book.created_at, format: :short%>
+    <%= image_tag @picture_book.picture_url, size: "200x200"%>
+    <ul class="list-group list-group-flush">
+      <% if @picture_book.price.blank? %>
+        <li class="list-group-item">価格: 未設定</li>
+      <% else %>
+        <li class="list-group-item">価格: <%= @picture_book.price %></li>
+      <% end %>
+      <% if @picture_book.shop.blank? %>
+        <li class="list-group-item">購入店舗: 未設定</li>
+      <% else %>
+        <li class="list-group-item">購入店舗: <%= @picture_book.shop %></li>
+      <%end%>  
+        <li class="list-group-item">購入日: <%= @picture_book.purchase_date%></li>
+    </ul>
+  </div>
+</div>
+<%= button_to '編集', edit_picture_book_url(@picture_book) %>
+<%= button_to '削除', picture_book_url(@picture_book), date: {turbo_method: :delete}%>
+</div>

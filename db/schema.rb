@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_08_184446) do
     t.string "breed"
     t.string "price"
     t.string "shop"
-    t.date "purchase_date", default: "2023-01-10"
+    t.date "purchase_date", default: "2023-01-11"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

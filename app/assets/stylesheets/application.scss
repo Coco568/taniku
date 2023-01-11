@@ -20,10 +20,6 @@ footer {
   font-size: 25px;
 }
 
-.container-fluid {
-  height: 50px;
-  width: 100%
-}
 
 .btn {
   //border-radius: 0.25rem;
@@ -128,4 +124,20 @@ footer {
 
 .form-group {
   margin-bottom: 20px;
+}
+
+.picture-image {
+  text-align: center;
+}
+.card-title  {
+  text-align: center;
+a {
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: #373a3c;
+}}
+
+.list-group-item {
+  text-align: center;
 }

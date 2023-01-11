@@ -1,7 +1,7 @@
 <header>
   <nav class = "navbar navbar-expand  fixed-top" style="background-color: #88ab36; height: 50px;">
     <div class = "container-fluid">
-      <a class = "navbar-brand">私の多肉こよみ</a>
+      <%= link_to '私の多肉こよみ', root_path, class: "navbar-brand" %>
       <ul class="navbar-nav mb-2 ">
         <li class = "nav-item">
           <%= image_tag current_user.icon_url, size: "50x50"%>
