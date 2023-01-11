@@ -1,7 +1,6 @@
 class PictureBook < ApplicationRecord
   belongs_to :user 
   mount_uploader :picture, PictureUploader
-  has_many_attached :picture
   attribute :purchase_date, :date, default: Date.current.strftime
   validates :breed, presence: true
   validates :price, length: {maximum: 15}
