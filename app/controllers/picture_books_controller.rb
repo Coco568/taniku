@@ -1,7 +1,8 @@
 class PictureBooksController < ApplicationController
   before_action :set_picture_book_params, only: %i[edit update destroy]
   def index
-    @picture_books = current_user.picture_books.all
+    @q = current_user.picture_books.ransack(params[:q])
+    @picture_books = @q.result(distinct: true)
   end
 
   def new
