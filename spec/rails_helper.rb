@@ -60,5 +60,16 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+
+  RSpec.configure do |config|
+    config.before(:each, type: :system) do
+      driven_by :rack_test
+    end
+
+    config.before(:each, type: :system, js: true) do
+      driven_by :selenium_chrome_headless, screen_size: [1400, 1400]
+    end
+  end
   config.include FactoryBot::Syntax::Methods
 end

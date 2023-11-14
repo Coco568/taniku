@@ -66,7 +66,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.1)
+    addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
@@ -79,6 +79,15 @@ GEM
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    capybara (3.39.2)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     carrierwave (3.0.0.beta)
       activemodel (>= 6.0.0)
       activesupport (>= 6.0.0)
@@ -140,9 +149,10 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mini_magick (4.12.0)
-    mini_mime (1.1.2)
+    mini_mime (1.1.5)
     minitest (5.18.1)
     msgpack (1.6.0)
     multi_xml (0.6.0)
@@ -156,9 +166,9 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.15.2-arm64-darwin)
+    nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.2-x86_64-linux)
+    nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     oauth (0.6.2)
       snaky_hash (~> 2.0)
@@ -177,11 +187,11 @@ GEM
       method_source (~> 1.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    public_suffix (5.0.1)
+    public_suffix (5.0.3)
     puma (5.6.5)
       nio4r (~> 2.0)
-    racc (1.7.1)
-    rack (2.2.7)
+    racc (1.7.3)
+    rack (2.2.8)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.4)
@@ -219,8 +229,10 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
+    regexp_parser (2.8.2)
     reline (0.3.2)
       io-console (~> 0.5)
+    rexml (3.2.6)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.3)
@@ -241,6 +253,7 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
+    rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -249,6 +262,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    selenium-webdriver (4.15.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
     simple_calendar (2.4.3)
       rails (>= 3.0)
     snaky_hash (2.0.1)
@@ -285,9 +302,12 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    websocket (1.2.10)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.6.8)
 
 PLATFORMS
@@ -297,6 +317,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap
+  capybara
   carrierwave (>= 3.0.0.beta, < 4.0)
   debug
   enum_help
@@ -313,6 +334,7 @@ DEPENDENCIES
   rails-i18n
   ransack
   rspec-rails
+  selenium-webdriver
   simple_calendar (~> 2.4)
   sorcery
   sprockets-rails
