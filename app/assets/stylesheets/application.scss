@@ -169,7 +169,29 @@ a {
 }
 
 .content {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom:auto; 
   height: 100px;
+}
+.detail-content {
+  font-size: 25px;
+  margin-top: 45px;
+  height: 300px;
+}
+.detail-date{
+  font-size: 20px;
+}
+.fixed-post-button{
+  text-align: right;
+  margin-right: 10px;
+.large-post-button {
+  font-size: 50px;
+  z-index: 1000;
+  position: fixed;
+  border-radius: 10px;
+}}
+
+.post-detail-link {
+  text-decoration: none;
+  color:#373a3c;
 }

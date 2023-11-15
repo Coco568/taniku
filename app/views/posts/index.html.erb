@@ -1,5 +1,8 @@
-<% if @posts.present? %>
-  <%=render @posts%>
-<% else%>
-  <p>まだ投稿がありません</p>
-<% end%>
+<div class="container  mx-5">  
+  <%= render 'button'%>
+  <% if @posts.present? %>
+      <%=render @posts%>
+  <% else%>
+    <p>まだ投稿がありません</p>
+  <% end%>
+</div>
