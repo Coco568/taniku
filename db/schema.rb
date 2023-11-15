@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_08_184446) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_15_045218) do
   create_table "calendars", force: :cascade do |t|
     t.integer "date_type", default: 0
     t.date "record_date"
@@ -24,12 +24,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_08_184446) do
     t.string "breed"
     t.string "price"
     t.string "shop"
-    t.date "purchase_date", default: "2023-01-11"
+    t.date "purchase_date", default: "2023-11-15"
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
     t.index ["user_id"], name: "index_picture_books_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "content"
+    t.string "image"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +56,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_08_184446) do
 
   add_foreign_key "calendars", "users"
   add_foreign_key "picture_books", "users"
+  add_foreign_key "posts", "users"
 end
