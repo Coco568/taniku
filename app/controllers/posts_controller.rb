@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post ,only: %i[edit update destroy]
   def index
-    @q = posts.ransack(params[q])
-    @post = @q.result(distinct)
+    @q = Post.ransack(params[:q])
+    @post = @q.result(distinct: true)
   end
 
   def new
@@ -25,6 +25,7 @@ class PostsController < ApplicationController
       redirect_to post_path(@post), success: '投稿を編集しました'
     else
       render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -36,7 +37,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :image)
+    params.require(:post).permit(:content, :image, :image_cache)
   end
 
   def set_post

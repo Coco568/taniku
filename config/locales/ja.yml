@@ -24,6 +24,9 @@ ja:
         shop: 購入店舗
         picture: 写真
         purchase_date: 購入日
+      post:
+        content: 内容
+        image: 画像
   enums:
     user:
       gender:
