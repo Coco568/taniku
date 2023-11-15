@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post ,only: %i[edit update destroy]
   def index
     @q = Post.ransack(params[:q])
-    @post = @q.result(distinct: true)
+    @posts = @q.result(distinct: true)
   end
 
   def new
