@@ -1,0 +1,9 @@
+<%= search_form_for @q, url: url , class: "search-bar" do |f| %>
+  <div class="input-group mb-3",style=background-color:#cfe0a3; >
+    <%= f.label :breed, "図鑑の検索", class: "search-title"%>
+    <%= f.search_field :breed_cont, class: 'form-control', placeholder: "品種名を入力してください"%>
+    <span class="input-group-btn input-group-append">
+      <%=f.submit "検索",  class: "btn btn-danger"   %>
+    </span>
+  </div>
+<% end %>

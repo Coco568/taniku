@@ -11,11 +11,10 @@ ja:
       user:
         name: ユーザー名
         email: メールアドレス
-        prefecture: 都道府県
         gender: 性別
         password: パスワード
         password_confirmation: パスワード(確認)
-        prefecture_code: 都道府県
+        prefecture_codes: 都道府県
       calendar:
         date_type: 記録の種類
         record_date: 日付
@@ -45,4 +44,3 @@ ja:
     default: ! '%Y/%m/%d'
     long: ! '%Y年%m月%d日'
     short: ! '%m/%d'
-

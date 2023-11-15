@@ -6,4 +6,8 @@ class PictureBook < ApplicationRecord
   validates :price, length: {maximum: 15}
   validates :shop, length: {maximum: 20}
   validates :purchase_date, presence: true
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["breed"]
+  end
 end

@@ -2,7 +2,7 @@ class CalendarsController < ApplicationController
   before_action :set_record, only: %i[edit update destroy]
   def index  
     start_date = params.fetch(:start_date, Date.today).to_date
-    @calendars = Calendar.where(user_id: current_user.id, record_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @calendars = current_user.calendars.where(user_id: current_user.id, record_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
   end
 
   def create
