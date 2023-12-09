@@ -74,8 +74,7 @@ footer {
 
 .simple-calendar {
   margin-top: 100px;
-  width: 65%;
-  margin-left: 20px;
+  width: 60%;
   .calendar-heading{
     display:flex;
     width: 50%;
@@ -85,10 +84,6 @@ footer {
       margin: 6px;
       text-align: center;
     }
-  }
-
-  .calendar-title  {
-    font-size: 30px;
   }
 
   table {
@@ -192,15 +187,6 @@ a {
 .detail-date{
   font-size: 20px;
 }
-.fixed-post-button{
-  text-align: right;
-  margin-right: 10px;
-.large-post-button {
-  font-size: 50px;
-  z-index: 1000;
-  position: fixed;
-  border-radius: 10px;
-}}
 
 .post-detail-link {
   text-decoration: none;
@@ -217,5 +203,101 @@ a {
   border-radius: 10px;
 }
 .container {
-  margin-top: 100px; 
+  margin-top: auto; 
 }
+
+.picture-books-container {
+  margin-top: 150px;
+}
+@media screen and (min-width:767px){
+ .logo-area {
+   img{
+    height: 400px;
+   }}
+
+  .alert{
+    margin-top: 100px;
+  }
+
+  .calendar-title {
+    font-size:30px;
+  }
+  .simple-calendar {
+    margin-left: 20px;
+  }
+  .fixed-post-button{
+    margin-top: 100px;
+    text-align: right;
+    margin-right: 10px;
+  .large-post-button {
+    font-size: 50px;
+    z-index: 1000;
+    position: fixed;
+    border-radius: 10px;
+  }}
+  .container.post-show {
+    .card{
+    margin-top: 50px;
+  }}}
+
+@media screen and (max-width: 767px) {
+  .alert{
+    margin-top: 100px;
+  }
+
+
+  .nav-item {
+    font-size: 16px;
+    margin-right: auto;
+  }
+  .logo-area {
+    text-align: center;
+    img{
+      width:90%;
+    }}
+    
+  .top-content {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .usernew {
+    margin-top: 20px;
+  }
+
+  .input-record {
+    h1{
+      font-size: 20px;
+    }
+    font-size: 15px;
+  }
+  .calendar-title{
+    font-size: 20px;
+  }
+
+  .card-body {
+    width:150px;
+    img{
+      height:145px;
+      width:145px;
+    }}
+    .fixed-post-button{
+      margin-top: 100px;
+      text-align: right;
+      margin-right: 100px;
+      .large-post-button {
+      font-size: 30px;
+      z-index: 1000;
+      position: fixed;
+      border-radius: 10px;
+    }}
+
+    .container.post-show {
+      margin-top: 150px;
+      .card{
+        height:auto;
+      }
+      .post-img{
+        width:350px;
+        height:350px;
+      }}}

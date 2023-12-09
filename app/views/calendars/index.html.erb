@@ -1,26 +1,28 @@
-<div class="input-record"> 
-  <h1>登録する日付を入力してください</h1>
-  <%= form_with model: Calendar.new,url: calendars_path,local: true do |f|%>
-    <div class="form-group">
-      <%= f.label :date_type%></br>
-      <%= f.select :date_type, Calendar.date_types_i18n.invert, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :record_date%>
-      <%= f.date_field :record_date, class:'form-control' %>
-    </div>
-    <%= f.submit class: 'btn btn-danger'%>
-  <% end %>
-</div>
-<div id="calendar">
-  <%= render 'calendar', logs: @logs %>
-</div>
-<div class="icon">
-  <%= image_tag 'watering_icon', size: '40x40' %><p>: 水やり</p>
-</div>
-<div class="icon">
-  <%= image_tag 'pesticide_icon', size: '40x40' %><p>: 薬剤</p>
-</div>
-<div class="icon">
-  <%= image_tag 'fertilizer_icon', size: '40x40' %><p>: 肥料</p>
+<div class="container-fluid">
+  <div class="input-record"> 
+    <h1>登録する日付を入力してください</h1>
+    <%= form_with model: Calendar.new,url: calendars_path,local: true do |f|%>
+      <div class="form-group">
+        <%= f.label :date_type%></br>
+        <%= f.select :date_type, Calendar.date_types_i18n.invert, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :record_date%>
+        <%= f.date_field :record_date, class:'form-control' %>
+      </div>
+      <%= f.submit class: 'btn btn-danger'%>
+    <% end %>
+  </div>
+  <div id="calendar">
+    <%= render 'calendar', logs: @logs %>
+  </div>
+  <div class="icon">
+    <%= image_tag 'watering_icon', size: '40x40' %><p>: 水やり</p>
+  </div>
+  <div class="icon">
+    <%= image_tag 'pesticide_icon', size: '40x40' %><p>: 薬剤</p>
+  </div>
+  <div class="icon">
+    <%= image_tag 'fertilizer_icon', size: '40x40' %><p>: 肥料</p>
+  </div>
 </div>
