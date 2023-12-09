@@ -1,8 +1,10 @@
-<div class="container  mx-5">  
+<div class="container ">  
   <%= render 'button'%>
   <% if @posts.present? %>
       <%=render @posts%>
   <% else%>
-    <p>まだ投稿がありません</p>
+    <div class="index-post">
+      <h1>まだ投稿がありません</h1>
+    </div>
   <% end%>
 </div>
